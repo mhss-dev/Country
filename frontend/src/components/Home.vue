@@ -1,36 +1,33 @@
 <template>
-
-<div class="flex flex-col justify-start items-center">
-  <div class="grid grid-cols-4 gap-6 py-10">
-
-    <div v-for="country in countries" class="card">
-  <div class="flex flex-col rounded-lg shadow-xl w-64 h-full text-white">
-    <div class="h-1/2 w-full">
-      <img :src="country.flag" class="w-full h-full object-cover">
-    </div>
-    <div class="flex flex-col items-start justify-center p-4 text-center mt-8">
-      <h2 class="text-xl font-bold">{{ country.translations.fr }}</h2>
-      <p>Population : {{ country.population.toLocaleString() }}</p>
-      <p>Continent : {{ country.region || 'Inconnu' }}</p>
-      <p>Capitale : {{ country.capital || 'Inconnue' }}</p>
+  <div class="flex flex-col justify-start items-center">
+    <div class="grid grid-cols-4 gap-6 py-10">
+      <div v-for="country in countries" class="card">
+        <div class="flex flex-col rounded-lg shadow-xl w-64 h-full text-white bg-gray-800 hover:bg-gray-700 transition duration-300">
+          <div class="h-1/2 w-full mb-2">
+            <img :src="country.flags.png" class="w-full flag">
+          </div>
+          <div class="flex flex-col items-center justify-center text-center mb-5">
+            <h2 class="text-xl font-bold mb-3 pt-3">{{ country.translations.fr }}</h2>
+            <p>Population : {{ country.population.toLocaleString() }}</p>
+            <p>Continent : {{ continents_name[country.region] || 'Inconnu' }}</p>
+            <p>Capitale : {{ country.capital || 'Inconnue' }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
- </div>
-    
-</div>
-
 </template>
-
 
 <style>
 .card {
-  background-color: #23272b;
   transition: transform 0.3s ease;
 }
 .card:hover {
   transform: scale(1.05);
+}
+
+.flag {
+  height: 160px;
 }
 </style>
 
@@ -38,11 +35,20 @@
 
 import axios from 'axios';
 
+
 export default {
 
 data() {
   return {
-    countries: []
+    countries: [],
+    continents_name: {
+      Europe: 'Europe',
+      Africa: 'Afrique',
+      Americas: 'Amérique',
+      Oceania: 'Océanie',
+      Asia: 'Asie',
+      Polar: 'Pôle nord'
+    }
 
   }
 },
