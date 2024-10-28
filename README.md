@@ -9,9 +9,9 @@ Ce projet est une application simple qui affiche une liste de pays avec leurs no
 
 ## À faire
 
-- Implémenter un filtrage par continent
-- Créer une page dédiée pour afficher des données supplémentaires
-- Ajouter une barre de recherche
+- ~~Implémenter un filtrage par continent~~
+- ~~Créer une page dédiée pour afficher des données supplémentaires~~
+- ~~Ajouter une barre de recherche~~
 
 ## Technologies utilisées
 
