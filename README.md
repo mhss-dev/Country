@@ -4,8 +4,11 @@ Ce projet est une application simple qui affiche une liste de pays avec leurs no
 
 ## Fonctionnalités
 
-- Affichage des drapeaux des pays, de leurs populations, de la capitale et du nombre d'habitants.
-- Mise en page en cartes pour une meilleure présentation visuelle.
+- Affichage des drapeaux des pays, de leurs populations, de la capitale et du nombre d'habitants
+- Mise en page en cartes pour une meilleure présentation visuelle
+- Filtrage par continent
+- Page dédiée pour afficher des données supplémentaires
+- Barre de recherche
 
 ## À faire
 
